@@ -1,1 +1,139 @@
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
+:root {
+--bg: #05080d;
+--panel: #0b111a;
+--panel2: #101824;
+--border: #1d2a39;
+--text: #edf5ff;
+--muted: #7f91a6;
+--cyan: #35d9ff;
+--blue: #4d7cff;
+--green: #39e58c;
+--orange: #ffb84d;
+--red: #ff5577;
+}
+
+html,
+body {
+width: 100%;
+height: 100%;
+overflow: hidden;
+background: var(--bg);
+color: var(--text);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+select {
+font: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+#app {
+width: 100vw;
+height: 100vh;
+display: grid;
+grid-template-columns: 220px 1fr 360px;
+grid-template-rows: 72px 1fr 32px;
+background:
+radial-gradient(
+circle at 50% 40%,
+#102033 0%,
+#05080d 55%
+);
+}
+
+.topbar {
+grid-column: 1 / 4;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 22px;
+border-bottom: 1px solid var(--border);
+background: rgba(5, 9, 15, 0.94);
+backdrop-filter: blur(15px);
+z-index: 20;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.brand-logo {
+width: 42px;
+height: 42px;
+display: grid;
+place-items: center;
+border: 1px solid var(--cyan);
+border-radius: 10px;
+color: var(--cyan);
+font-size: 14px;
+font-weight: 900;
+box-shadow: 0 0 18px rgba(53, 217, 255, 0.2);
+}
+
+.brand-info h1 {
+font-size: 17px;
+letter-spacing: 2px;
+}
+
+.brand-info p {
+margin-top: 3px;
+color: var(--muted);
+font-size: 8px;
+letter-spacing: 1.7px;
+}
+
+.network-status {
+display: flex;
+align-items: center;
+gap: 8px;
+color: #91a5bb;
+font-size: 10px;
+letter-spacing: 1.2px;
+}
+
+.online-dot {
+width: 7px;
+height: 7px;
+display: inline-block;
+border-radius: 50%;
+background: var(--green);
+box-shadow: 0 0 10px var(--green);
+}
+
+top-actions {
+display: flex;
+gap: 8px;
+}
+
+top-button {
+padding: 9px 13px;
+border: 1px solid var(--border);
+border-radius: 6px;
+background: #0c131d;
+color: #b9c9da;
+font-size: 9px;
+letter-spacing: 1px;
+}
+
+top-button:hover {
+border-color: var(--cyan);
+color: var(--cyan);
+}
+
+top-button.primary {
+border-color: var(--cyan);
+background: rgba(53, 217, 255, 0.08);
+color: var(--cyan);
+}
