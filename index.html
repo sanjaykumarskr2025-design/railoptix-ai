@@ -1,3 +1,35 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head> <body> <div id="app">
-</div> <script src="https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/three@0.179.1/examples/js/controls/OrbitControls.js"></script> <script src="stations.js"></script> <script src="trains.js"></script> <script src="maintenance.js"></script> <script src="app.js"></script> </body> </html>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>RailOptix AI</title> <meta name="description" content="AI Powered Railway Block Planning and 3D Train Operations Dashboard"> <link rel="stylesheet" href="style.css"> </head> <body> <div id="app"> <header class="topbar"> <div class="logo"> <span>🚆</span> <strong>RAILOPTIX</strong> <small>AI</small> </div> <div class="system-status">
+
+<span class="status-dot"></span>
+
+SYSTEM ONLINE
+
+<span id="live-time"> --:--:-- </span> </div> </header> <section class="dashboard"> <div class="stat-card"> <span class="stat-title"> STATIONS </span> <strong id="station-count"> 0 </strong> </div> <div class="stat-card"> <span class="stat-title"> ACTIVE TRAINS </span> <strong id="active-trains"> 0 </strong> </div> <div class="stat-card"> <span class="stat-title"> TOTAL TRAINS </span> <strong id="train-count"> 0 </strong> </div> <div class="stat-card"> <span class="stat-title"> MAINTENANCE BLOCKS </span> <strong id="maintenance-count"> 0 </strong> </div> </section> <main class="main-container"> <section class="three-d-panel"> <div class="panel-header"> <div> <span class="eyebrow"> LIVE OPERATIONS </span> <h1> Railway Network </h1> </div>
+
+<button
+data-action="reset-view"
+class="control-button"
+
+RESET VIEW
+</button>
+
+</div> <div id="three-container" class="three-container" > <div id="loading-screen" class="loading-screen" > <div class="loader"></div> <p> INITIALIZING RAILOPTIX AI... </p> </div> </div> </section> <aside class="side-panel"> <div class="panel-card"> <h2> Station Search </h2>
+
+<input
+id="station-search"
+type="text"
+placeholder="Search station..."
+autocomplete="off"
+
+<div id="station-results" class="station-results" ></div> </div> <div class="panel-card"> <h2> Selected Object </h2> <div id="selected-object" class="selected-object" > <p> Select a station or train from the 3D network. </p> </div> </div> <div class="panel-card ai-card"> <div class="ai-heading"> <span> 🤖 </span> <div> <h2> AI Block Scheduler </h2> <p> Optimize maintenance windows automatically. </p> </div> </div>
+
+<button
+id="generate-plan"
+class="ai-button"
+
+GENERATE AI BLOCK PLAN
+</button>
+
+<div id="ai-result" class="ai-result" > <p> Ready to analyze railway traffic and maintenance conflicts. </p> </div> </div> </aside> </main> <footer> <span> RAILOPTIX AI </span> <span> AI-Powered Railway Block Planning </span> <span> SYSTEM v1.0 </span> </footer> </div> <script src="https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/three@0.179.1/examples/js/controls/OrbitControls.js"></script> <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> <script src="stations.js"></script> <script src="trains.js"></script> <script src="maintenance.js"></script> <script src="supabase.js"></script> <script src="app.js"></script> </body> </html>
+
+END OF INDEX.HTML
